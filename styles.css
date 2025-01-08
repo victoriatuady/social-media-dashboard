@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* PRIMARY COLOR */
+  --GREENTEXTCOLOR: hsl(163, 72%, 41%);
+  --REDTEXTCOLOR: hsl(356, 69%, 56%);
+  --FACEBOOKCOLOR: hsl(208, 92%, 53%);
+  --TWITTERCOLOR: hsl(203, 89%, 53%);
+  --INSTAGRADIENT: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+  --YOUTUBECOLOR: hsl(348, 97%, 39%);
+
+  /* DARK THEME */
+  --BGCOLRDARK: rgb(30, 32, 42);
+  --TOPBGCOLORDARK: hsl(232, 19%, 15%);
+  --CARDBGCOLORDARK: hsl(228, 28%, 20%);
+  --TEXTCOLOR1DARK: hsl(228, 34%, 66%);
+  --TEXTCOLOR2DARK: hsl(0, 0%, 100%);
+  --TOGGLECOLORDARK: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+
+  /* LIGHT THEME */
+  --LTBGCOLOR: hsl(0, 0%, 100%);
+  --LTTOPBGCOLOR: hsl(225, 100%, 98%);
+  --LTCARDBGCOLOR: hsl(227, 47%, 96%);
+  --LTTEXTCOLOR1: hsl(228, 12%, 44%);
+  --LTTEXTCOLOR2: hsl(230, 17%, 14%);
+  --LTTOGGLECOLOR: hsl(230, 22%, 74%);
+}
+
+/* || GENETAL STYLES */
+body {
+  background-color: var(--LTBGCOLOR);
+  font-family: "Inter", serif;
+  background-color: #fff;
+}
+
+h1 {
+  padding-top: 2rem;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: var(--LTTEXTCOLOR2);
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.topBG {
+  padding: 0 1.5rem 2.5rem 1.5rem;
+  border-radius: 0 0 0.7rem 0.7rem;
+  background-color: var(--LTTOPBGCOLOR);
+}
+
+.topBG p {
+  margin: 0.3rem 0 1.5rem 0;
+  color: var(--LTTEXTCOLOR1);
+}
+
+.toggle {
+  margin-top: 0.7rem;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+hr {
+  outline: none;
+  border: 1px solid #aeb3cb;
+}
+
+.toggleMode {
+  position: relative;
+  width: 40px;
+  height: 18px;
+  border-radius: 3rem;
+  cursor: pointer;
+  background-color: var(--LTTOGGLECOLOR);
+}
+
+.toggleMode:hover {
+  background-image: var(--TOGGLECOLORDARK);
+}
+
+.toggleSwitch {
+  position: absolute;
+  top: 10%;
+  right: 7%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.cardSection {
+  margin-top: -2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--LTCARDBGCOLOR);
+  padding: 2rem 0 1.5rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+
+.profileName {
+  display: flex;
+  align-items: end;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--LTTEXTCOLOR1);
+}
+
+.card h1 {
+  padding-top: 0;
+  margin-top: 1.2rem;
+  font-size: 40px;
+}
+
+.card p {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--LTTEXTCOLOR1);
+}
+
+.analytics {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  margin-top: 1.3rem;
+  font-weight: 700;
+}
+
+.green {
+  color: var(--GREENTEXTCOLOR);
+  font-weight: 700;
+  margin-left: 0.2em;
+}
+
+.red {
+  color: var(--REDTEXTCOLOR);
+  font-weight: 700;
+  margin-left: 0.2em;
+}
+
+.facebook {
+  border-top: 4px solid var(--FACEBOOKCOLOR);
+}
+
+.twitter {
+  border-top: 4px solid var(--TWITTERCOLOR);
+}
+
+.instagram {
+  border-top: 4px;
+  border-top-style: solid;
+  border-image-source: var(--INSTAGRADIENT);
+  border-image-slice: 1;
+}
+
+.youtube {
+  border-top: 4px solid var(--YOUTUBECOLOR);
+}
+
+#h1 {
+  margin: 1rem 1.5rem 1.5rem 1.5rem;
+  color: var(--LTTEXTCOLOR1);
+}
+
+.overview {
+  margin: 0 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card2 {
+  background-color: var(--LTCARDBGCOLOR);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.card,
+.card2 {
+  cursor: pointer;
+}
+
+.card:hover,
+.card2:hover {
+  background-color: hsl(224, 44%, 92%);
+}
+
+.views,
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.views p {
+  font-weight: 700;
+  color: var(--LTTEXTCOLOR1);
+}
+
+.count p {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 425px) {
+  .topBG {
+    padding: 0 3rem 3rem 3rem;
+  }
+  .cardSection,
+  .overview,
+  #h1 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cardSection,
+  .overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .toggleSwitch {
+    top: 12%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .topBG {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5.5rem 5rem 5.5rem;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .toggle {
+    gap: 0.7rem;
+  }
+
+  .cardSection {
+    margin-top: -5rem;
+  }
+
+  .cardSection,
+  .overview,
+  #h1 {
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+  }
+
+  .cardSection,
+  .overview {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .topBG {
+    padding: 0 7rem 6rem 7rem;
+  }
+  .cardSection,
+  .overview,
+  #h1 {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+}
