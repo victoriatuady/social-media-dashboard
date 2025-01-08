@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/victoriatuady/social-media-dashboard.git)
+- Live Site URL: [Site URL](https://victoriatuady.github.io/social-media-dashboard/)
 
 ## My process
 
