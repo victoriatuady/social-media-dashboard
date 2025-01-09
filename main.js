@@ -1,72 +1,50 @@
-var bgColor = document.querySelector("body");
+var body = document.querySelector("body");
 var topBG = document.querySelector(".topBG");
 var hr = document.querySelector("hr");
-var h1 = document.querySelectorAll("h1");
-var topBGtextcolor = document.querySelectorAll(".topBG p");
+var boldText = document.querySelectorAll(".boldTextColor");
+var text = document.querySelectorAll("textColor");
 var toggleBG = document.querySelector(".toggleMode");
 var toggleSwitch = document.querySelector(".toggleSwitch");
 var card1 = document.querySelectorAll(".card");
-var profileText1 = document.querySelectorAll(".profileName span");
-var profileText2 = document.querySelectorAll(".card p");
 var card2 = document.querySelectorAll(".card2");
-var viewsText = document.querySelectorAll(".views p");
-var countText = document.querySelectorAll(".count p");
 
-//Add click event to the button to chang color theme
+// Toggle event listener
 toggleBG.addEventListener("click", () => {
-  bgColor.style.backgroundColor = "#1e202a";
-  topBG.style.backgroundColor = "#1f212e";
-  hr.style.border = "1px solid #252a41";
-  toggleBG.style.backgroundImage =
-    "linear-gradient( to right, #378fe6, #3eda82)";
-  toggleSwitch.style.backgroundColor = "#252a41";
-  toggleSwitch.style.left = "7%";
+  body.classList.toggle("dark-mode");
+  topBG.classList.add("topBGColor");
+  hr.classList.add("hr");
+  toggleBG.classList.add("toggleGradient");
+  toggleSwitch.classList.add("toggleButton");
 
-  h1.forEach((text) => {
-    text.style.color = "#fff";
+  boldText.forEach((text) => {
+    text.classList.add("textColor2");
   });
 
-  topBGtextcolor.forEach((text) => {
-    text.style.color = "#8b97c6";
+  text.forEach((text) => {
+    text.classList.add("textColor1");
   });
 
   card1.forEach((card) => {
-    card.style.backgroundColor = "#262b40";
+    card.classList.add("cardbackgroundcolor");
 
     card.addEventListener("mouseover", () => {
-      card.style.backgroundColor = "#323855";
+      card.classList.add("darkhover");
     });
 
     card.addEventListener("mouseout", () => {
-      card.style.backgroundColor = "#252a41";
+      card.classList.remove("darkhover");
     });
-  });
-
-  profileText1.forEach((text) => {
-    text.style.color = "#8b97c6";
-  });
-
-  profileText2.forEach((text) => {
-    text.style.color = "#8b97c6";
   });
 
   card2.forEach((card) => {
-    card.style.backgroundColor = "#262b40";
+    card.classList.add("cardbackgroundcolor");
 
     card.addEventListener("mouseover", () => {
-      card.style.backgroundColor = "#323855";
+      card.classList.add("darkhover");
     });
 
     card.addEventListener("mouseout", () => {
-      card.style.backgroundColor = "#252a41";
+      card.classList.remove("darkhover");
     });
-  });
-
-  viewsText.forEach((text) => {
-    text.style.color = "#8b97c6";
-  });
-
-  countText.forEach((text) => {
-    text.style.color = "#fff";
   });
 });

@@ -47,11 +47,12 @@ img {
   --LTTOGGLECOLOR: hsl(230, 22%, 74%);
 }
 
-/* || GENETAL STYLES */
+/* || GENETAL STYLES  LIGHT-MODE STYLES*/
 body {
   background-color: var(--LTBGCOLOR);
   font-family: "Inter", serif;
   background-color: #fff;
+  transition: background-color 0.3s ease;
 }
 
 h1 {
@@ -59,7 +60,15 @@ h1 {
   font-weight: 700;
   font-size: 20px;
   text-transform: capitalize;
+}
+
+.boldTextColor {
   color: var(--LTTEXTCOLOR2);
+}
+
+.textColor {
+  color: var(--LTTEXTCOLOR1);
+  font-weight: 700;
 }
 
 p {
@@ -75,7 +84,6 @@ p {
 
 .topBG p {
   margin: 0.3rem 0 1.5rem 0;
-  color: var(--LTTEXTCOLOR1);
 }
 
 .toggle {
@@ -111,6 +119,7 @@ hr {
   height: 14px;
   border-radius: 50%;
   background-color: #fff;
+  transition: left 0.3s ease;
 }
 
 .cardSection {
@@ -151,7 +160,6 @@ hr {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: var(--LTTEXTCOLOR1);
 }
 
 .analytics {
@@ -195,7 +203,6 @@ hr {
 
 #h1 {
   margin: 1rem 1.5rem 1.5rem 1.5rem;
-  color: var(--LTTEXTCOLOR1);
 }
 
 .overview {
@@ -231,20 +238,58 @@ hr {
   justify-content: space-between;
 }
 
-.views p {
-  font-weight: 700;
-  color: var(--LTTEXTCOLOR1);
-}
-
 .count p {
   font-size: 30px;
   font-weight: 700;
+}
+
+/* || DARK-MODE STYLES */
+body.dark-mode {
+  background-color: var(--BGCOLRDARK);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .topBGColor {
+  background-color: var(--TOPBGCOLORDARK);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .toggleGradient {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+body.dark-mode .toggleButton {
+  background-color: #252a41;
+  left: 7%;
+}
+
+body.dark-mode .cardbackgroundcolor {
+  background-color: var(--CARDBGCOLORDARK);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .textColor1 {
+  color: var(--TEXTCOLOR1DARK);
+}
+
+body.dark-mode .textColor2 {
+  color: var(--TEXTCOLOR2DARK);
+}
+
+body.dark-mode .hr {
+  outline: none;
+  border: 1px solid #252a41;
+}
+
+body.dark-mode .darkhover {
+  background-color: #323855;
 }
 
 @media screen and (min-width: 425px) {
   .topBG {
     padding: 0 3rem 3rem 3rem;
   }
+
   .cardSection,
   .overview,
   #h1 {
@@ -302,6 +347,7 @@ hr {
   .topBG {
     padding: 0 7rem 6rem 7rem;
   }
+
   .cardSection,
   .overview,
   #h1 {
