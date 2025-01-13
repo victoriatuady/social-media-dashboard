@@ -7,6 +7,7 @@ var toggleBG = document.querySelector(".toggleMode");
 var toggleSwitch = document.querySelector(".toggleSwitch");
 var card1 = document.querySelectorAll(".card");
 var card2 = document.querySelectorAll(".card2");
+var theme = document.querySelector(".theme");
 
 // Toggle event listener
 toggleBG.addEventListener("click", () => {
@@ -15,6 +16,12 @@ toggleBG.addEventListener("click", () => {
   hr.classList.add("hr");
   toggleBG.classList.add("toggleGradient");
   toggleSwitch.classList.add("toggleButton");
+
+  if (body.classList.contains("dark-mode")) {
+    theme.textContent = "Light Mode";
+  } else {
+    theme.innerHTML = "Dark Mode";
+  }
 
   boldText.forEach((text) => {
     text.classList.add("textColor2");
